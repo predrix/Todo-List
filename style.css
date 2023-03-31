@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Monda", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(54, 132, 223) 100%);
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  padding-left: 16px;
+  border-left: 5px solid #c74c3c;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+button {
+  background-color: darkorange;
+  color: #102f5e;
+  border: 2px solid #102f5e;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  border: 1px solid #f5880e;
+}
+button:hover {
+  background-color: darkorange;
+  color: #fff;
+}
+button i {
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.todo {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 40%;
+  margin: 3rem auto;
+  padding: 1.5rem;
+}
+.todo__clock {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1rem 1.5rem 1rem;
+  font-size: 16px;
+  color: #102f5e;
+}
+.todo__date {
+  font-size: 20px;
+}
+.todo__hour {
+  font-size: 18px;
+  font-weight: bold;
+}
+.todo__pack {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.2rem 0.3rem;
+  border-bottom: 1px solid #ddd;
+  transition: 0.3s;
+}
+.todo__cur-hour {
+  font-size: 10px;
+  margin-right: 1rem;
+}
+.todo__cur-date {
+  font-size: 12px;
+  margin-right: 1rem;
+}
+.todo__default {
+  flex: 1;
+  font-size: 1.3rem;
+}
+.todo__finish, .todo__edit, .todo__remove {
+  margin-left: 0.4rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #ecf0f1;
+}
+.todo__finish:hover, .todo__edit:hover, .todo__remove:hover {
+  background-color: #395169;
+  color: #ecf0f1;
+}
+
+.form {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.form__title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.form__cancel {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+.form__control {
+  display: flex;
+}
+.form__control input {
+  font-size: 0.9rem;
+  flex: 1;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid #858585;
+  padding: 0.4rem 0.5rem;
+  margin-right: 0.8rem;
+}
+.form__control button {
+  background-color: #76df76;
+  border-radius: 5px;
+  border: none;
+}
+.form__control button:hover {
+  background-color: green;
+}
+
+.done {
+  background-color: green;
+  border-radius: 5px;
+}
+.done p {
+  color: #fff;
+  font-style: italic;
+  text-decoration: line-through;
+}
+.done button {
+  background-color: #395169;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

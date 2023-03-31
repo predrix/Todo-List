@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
+
+@mixin button {
+  margin-left: 0.4rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #ecf0f1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Monda", sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 0%,
+    rgba(54, 132, 223, 1) 100%
+  );
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  padding-left: 16px;
+  border-left: 5px solid #c74c3c;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+button {
+  background-color: darkorange;
+  color: #102f5e;
+  border: 2px solid #102f5e;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  border: 1px solid #f5880e;
+  &:hover {
+    background-color: darkorange;
+    color: #fff;
+  }
+  i {
+    font-weight: bold;
+    pointer-events: none;
+  }
+}
+
+.todo {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 40%;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  &__clock {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem 1.5rem 1rem;
+    font-size: 16px;
+    color: #102f5e;
+  }
+  &__date {
+    font-size: 20px;
+  }
+  &__hour {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__pack {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.2rem 0.3rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+  }
+  &__cur-hour {
+    font-size: 10px;
+    margin-right: 1rem;
+  }
+  &__cur-date {
+    font-size: 12px;
+    margin-right: 1rem;
+  }
+  &__default {
+    flex: 1;
+    font-size: 1.3rem;
+  }
+  &__finish,
+  &__edit,
+  &__remove {
+    @include button();
+  }
+  &__finish:hover,
+  &__edit:hover,
+  &__remove:hover {
+    background-color: #395169;
+    color: #ecf0f1;
+  }
+}
+.form {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  &__title {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  &__cancel {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-radius: 5px;
+  }
+  &__control {
+    display: flex;
+    input {
+      font-size: 0.9rem;
+      flex: 1;
+      outline: none;
+      border-radius: 5px;
+      box-shadow: none;
+      border: 1px solid #858585;
+      padding: 0.4rem 0.5rem;
+      margin-right: 0.8rem;
+    }
+    button {
+      background-color: #76df76;
+      border-radius: 5px;
+      border: none;
+      &:hover {
+        background-color: green;
+      }
+    }
+  }
+}
+.done {
+  background-color: green;
+  border-radius: 5px;
+  p {
+    color: #fff;
+    font-style: italic;
+    text-decoration: line-through;
+  }
+  button {
+    background-color: #395169;
+    color: #fff;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>To do list</title>
+  </head>
+  <body>
+    <div class="todo">
+      <div class="todo__clock">
+        <p id="date" class="todo__date"></p>
+        <p id="hour" class="todo__hour"></p>
+      </div>
+      <header>
+        <h1>To Do List</h1>
+      </header>
+      <form id="form" class="form" action="">
+        <p class="form__title">What you wanna do</p>
+        <div class="form__control">
+          <input
+            id="input"
+            type="text"
+            placeholder="Next task (40 symbols)"
+            maxlength="40"
+          />
+          <button type="submit"><i class="fa-solid fa-plus"></i></button>
+        </div>
+      </form>
+      <form id="edit__form" class="form hidden" action="">
+        <p class="form__title">Edit task</p>
+        <div class="form__control">
+          <input
+            id="edit__input"
+            type="text"
+            placeholder="What's the next task"
+            maxlength="40"
+          />
+          <button type="submit">
+            <i class="fa-solid fa-check-double"></i>
+          </button>
+        </div>
+      </form>
+      <div id="todo__list" class="todo__list">
+        <div class="todo__pack">
+          <p class="todo__default">Deafault Task</p>
+          <span class="todo__cur-date"></span>
+          <span class="todo__cur-hour"></span>
+          <button class="todo__finish">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="todo__edit">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="todo__remove">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
